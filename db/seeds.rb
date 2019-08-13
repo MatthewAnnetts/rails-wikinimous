@@ -5,3 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+10.times do
+  article = Article.new(
+    title: Faker::Internet.username(specifier: 8),
+    content: Faker::Internet.domain_name)
+  article.save
+end
